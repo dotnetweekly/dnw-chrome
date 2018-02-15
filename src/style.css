@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+.body-height{
+  height: 550px;
+}
+
+label, input, textarea, select {
+  width: 100%;
+  display: block;
+  font-size:110%;
+}
+
+.input-group label {
+  padding-bottom:5px;
+}
+
+input, textarea {
+  padding:5px;
+}
+
+.error-group{
+  border: 1px solid red;
+  color: red;
+  font-size: 130%;
+}
+
+.input-group {
+  padding: 5px;
+}
+
+#html_element {
+  margin: 10px 0;
+}
+
+#html_element > div {
+  margin: 0 auto;
+}
+
+.dnw-submit-btn {
+  border: 0;
+  background: none;
+  -webkit-appearance: none;
+  background-color: #5c2d91;
+  color:#ffffff;
+  margin:10px auto 0px auto;
+  cursor: pointer;
+  font-size:150%;
+  width: 100%;
+  padding: 5px;
+}
+
+#dn-message {
+  height: 85px;
+  font-size: 13px;
+}
+
+#error_message {
+  border: 1px solid #AA0000;
+  color: #AA0000;
+  padding:5px;
+  font-size: 14px;
+}
+
+#success_message {
+  border: 1px solid #229922;
+  color: #229922;
+  padding:5px;
+  font-size: 14px;
+  width: 320px;
+}

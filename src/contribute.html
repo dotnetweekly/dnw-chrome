@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body class="body-height">
+        <img style="float:left" src="icon.png" />
+        <h2 style="padding-left:60px;">Share this link with dotNET Weekly</h2>
+        <div style="clear:both"></div>
+
+        <div id="success_message" style="display:none">
+            Thank you for contributing this article/resource to dotNET Weekly!
+        </div>
+
+        <div id="error_message" style="display:none">
+            Oops, something went wrong. All fields are required.
+            If this problem persists please contact info@dotnetweekly.com
+        </div>
+
+        <div style="clear:both"></div>
+        <form id="dn-form-login" style="width:320px" enctype="multipart/form-data" method="post" action="javascript:void(0)" novalidate>
+          <div class="input-group error-group" id="dn-form-error">
+            Invalid Credentials/Captcha Error.
+          </div>
+          <div class="input-group">
+              <label for="Email">Email</label>
+              <input id="dn-email" type="text" name="email" placeholder="Email (required)" />
+          </div>
+          <div class="input-group">
+              <label for="Password">Password</label>
+              <input id="dn-password" type="password" name="password" placeholder="Password (required)" />
+          </div>
+        </form>
+        <form id="dn-form" style="width:320px" enctype="multipart/form-data" method="post" action="javascript:void(0)" novalidate>
+            <div class="input-group">
+                <label for="Website">URL</label>
+                <input id="dn-website" type="text" name="url" placeholder="Website (required)" />
+            </div>
+            <div class="input-group">
+                <label for="Title">Title</label>
+                <input id="dn-title" type="text" name="title" placeholder="Title (required)" />
+            </div>
+            <div class="input-group">
+                <label for="Message">Content</label>
+                <textarea id="dn-message" name="content" placeholder="Message (required)"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="Category">Category</label>
+                <select name="Category" id="dn-category" value="category">
+                    <option value="articles">Articles</option>
+                    <option value="books">Books</option>
+                    <option value="events-training">Events-Training</option>
+                    <option value="libraries-tools">Libraries-Tools</option>
+                    <option value="videos">Videos</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="Tags">Tags</label>
+                <select name="Tags" multiple style="height:75px" id="dn-tags" value="tags">
+
+                </select>
+            </div>
+        </form>
+        <div style="clear:both"></div>
+        <div>
+            <button class="dnw-submit-btn g-recaptcha" data-sitekey="6LfWPkQUAAAAAJnias1Ez8xG21LEGGcn8UyZ2cUL" data-callback='onSubmit'>Submit</button>
+        </div>
+        <script src="contribute.js"></script>
+    </body>
+</html>
