@@ -4,12 +4,21 @@ var dnwExtToken = "";
 var dnwExtExpiration = 0;
 var keyNameToken = "dnwExtToken";
 var keyNameExpiration = "dnwExtExpiration";
-var url = "http://localhost:3000/api/v1/";
+var url = "https://dnw-api.azurewebsites.net/api/v1/";
 
 function refreshCaptcha(){
   setTimeout(function(){
     grecaptcha.reset();
   });
+}
+
+function logout(){
+  dnwExtExpiration = "";
+  dnwExtToken = "";
+  chrome.storage.sync.set({ [keyNameExpiration]: "" });
+  chrome.storage.sync.set({ [keyNameToken]: "" });
+  document.getElementById('dn-form').style.display = "none";
+  document.getElementById('dn-form-login').style.display = "block";
 }
 
 function loginUser() {
@@ -115,6 +124,10 @@ function onSubmit(token){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  document.getElementById("logout-btn").addEventListener("click", function( event ) {
+    logout();
+  }, false);
 
   getTags();
   document.getElementById('dn-form-login').style.display = "none";
