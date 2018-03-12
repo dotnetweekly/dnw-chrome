@@ -5,6 +5,7 @@ var dnwExtExpiration = 0;
 var keyNameToken = "dnwExtToken";
 var keyNameExpiration = "dnwExtExpiration";
 var url = "https://dnw-api.azurewebsites.net/api/v1/";
+// var url = "http://localhost:3000/api/v1/"
 
 function refreshCaptcha(){
   setTimeout(function(){
